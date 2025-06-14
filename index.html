@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | News homepage</title>
+  </head>
+  <body>
+    <header class="header flex">
+      <div class="header__logo-menu flex">
+        <a href="#" class="header__logo-link">
+          <img
+            src="assets/images/logo.svg"
+            alt="Website logo"
+            class="header__logo"
+          />
+        </a>
+        <button
+          class="header__menu-button header__menu-button--open"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          <img
+            src="assets/images/icon-menu.svg"
+            alt="Menu"
+            class="header__menu-icon"
+          />
+        </button>
+      </div>
+
+      <div class="overlay hidden"></div>
+
+      <nav class="nav hidden two-col" aria-label="Navigation menu">
+        <ul class="nav__list flex">
+          <li><a class="nav__link btn" href="#">Home</a></li>
+          <li><a class="nav__link btn" href="#">New</a></li>
+          <li><a class="nav__link btn" href="#">Popular</a></li>
+          <li><a class="nav__link btn" href="#">Trending</a></li>
+          <li><a class="nav__link btn" href="#">Categories</a></li>
+        </ul>
+        <button
+          class="header__menu-button header__menu-button--close flex"
+          aria-label="Close navigation menu"
+        >
+          <img src="assets/images/icon-menu-close.svg" alt="Close" />
+        </button>
+      </nav>
+    </header>
+
+    <main class="main-content container">
+      <div class="featured-new">
+        <article class="featured">
+          <figure class="featured__image-container">
+            <picture>
+              <source
+                srcset="assets/images/image-web-3-desktop.jpg"
+                media="(min-width: 1080px)"
+                type="image/jpeg"
+              />
+
+              <img
+                src="assets/images/image-web-3-mobile.jpg"
+                alt="Abstract colorful shapes representing Web 3.0"
+                class="featured__image"
+              />
+            </picture>
+          </figure>
+          <div class="featured__title-description">
+            <div class="featured__title-container">
+              <h1 class="featured__title">The Bright Future of Web 3.0?</h1>
+            </div>
+            <div class="featured__description-container">
+              <p class="featured__description">
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <a
+                href="#"
+                class="featured__read-more btn"
+                role="button"
+                aria-label="Read more about the future of Web 3.0"
+                >Read more</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <section class="new-articles" aria-labelledby="new-heading">
+          <!-- thinking whether i should wrap the h3 and p as a link -->
+          <h2 class="new__heading" id="new-heading">New</h2>
+          <article class="new__item">
+            <h3 class="new__title">
+              <a href="#" class="new__link">Hydrogen VS Electric Cars</a>
+            </h3>
+            <p class="new__summary">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </article>
+          <article class="new__item">
+            <h3 class="new__title">
+              <a href="#" class="new__link">The Downsides of AI Artistry</a>
+            </h3>
+            <p class="new__summary">
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </article>
+          <article class="new__item">
+            <h3 class="new__title">
+              <a href="#" class="new__link">Is VC Funding Drying Up?</a>
+            </h3>
+            <p class="new__summary">
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </article>
+        </section>
+      </div>
+
+      <section class="popular flex" aria-labelledby="popular-heading">
+        <h2 class="popular__heading visually-hidden" id="popular-heading">
+          Popular
+        </h2>
+
+        <ol class="popular__list grid" aria-labelledby="popular-heading">
+          <li class="popular__item">
+            <article class="popular__article flex">
+              <img
+                src="assets/images/image-retro-pcs.jpg"
+                alt="Old PCs with modern components"
+                class="popular__image"
+              />
+              <div class="popular__content flex">
+                <strong class="popular__rank">01</strong>
+                <h3 class="popular__title">
+                  <a href="#" class="popular__link">Reviving Retro PCs</a>
+                </h3>
+                <p class="popular__summary">
+                  What happens when old PCs are given modern upgrades?
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="popular__item">
+            <article class="popular__article flex">
+              <img
+                src="assets/images/image-top-laptops.jpg"
+                alt="Close-up of a laptop keyboard"
+                class="popular__image"
+              />
+              <div class="popular__content flex">
+                <strong class="popular__rank">02</strong>
+                <h3 class="popular__title">
+                  <a href="#" class="popular__link">Top 10 Laptops of 2022</a>
+                </h3>
+                <p class="popular__summary">
+                  Our best picks for various needs and budgets.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="popular__item">
+            <article class="popular__article flex">
+              <img
+                src="assets/images/image-gaming-growth.jpg"
+                alt="Gaming controller in hand"
+                class="popular__image"
+              />
+              <div class="popular__content flex">
+                <strong class="popular__rank">03</strong>
+                <h3 class="popular__title">
+                  <a href="#" class="popular__link">The Growth of Gaming</a>
+                </h3>
+                <p class="popular__summary">
+                  How the pandemic has sparked fresh opportunities.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>
