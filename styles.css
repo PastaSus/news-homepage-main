@@ -39,6 +39,8 @@ body {
   font-family: "Inter", sans-serif;
   margin: 0;
   font-size: 0.9375rem;
+
+  background-color: var(--Off-white);
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -490,6 +492,10 @@ textarea:not([rows]) {
 
     flex-direction: row;
     gap: var(--spacing-48);
+  }
+
+  .nav__link {
+    color: var(--Dark-grayish-blue);
   }
 
   .nav__link:hover {
